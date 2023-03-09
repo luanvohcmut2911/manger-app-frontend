@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import HomePage from './Router/HomePage';
+import LoginPage from './Router/LoginPage';
+import RegisterPage from './Router/RegisterPage';
+import ErrorPage from './Router/ErrorPage';
+import RouteProvider from './Context/RouteProvider';
+import AuthProvider from './Context/AuthProvider';
+import InfoModal from './Component/Modals/InfoModal';
+import AddModal from './Component/Modals/AddModal';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <AuthProvider>
+        <RouteProvider>
+          <Routes>
+            <Route path="/signup" element={<RegisterPage/>} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/*" element={<ErrorPage />}/>
+          </Routes>
+          <InfoModal />
+          <AddModal />
+        </RouteProvider>
+      </AuthProvider>
+    </BrowserRouter>
+    
   );
 }
 

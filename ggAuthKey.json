@@ -1,0 +1,12 @@
+{
+  "web": {
+    "client_id": "327502632969-fc1vr2mo29db2bt7evdfb1fli1q0q108.apps.googleusercontent.com",
+    "project_id": "manager-app-login",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "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",
+    "redirect_uris": ["http://localhost:3000", "http://localhost"],
+    "javascript_origins": ["http://localhost:3000", "http://localhost"]
+  }
+}
