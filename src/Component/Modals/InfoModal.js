@@ -72,7 +72,7 @@ export default function InfoModal() {
             <img
               src={infoModalVisible?.image}
               alt="modalImage"
-              style={{ maxHeight: "13rem" }}
+              style={{ maxWidth: "8rem" }}
             />
           </Col>
           <Col span={16}>{infoModalVisible?.description}</Col>

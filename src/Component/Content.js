@@ -16,7 +16,8 @@ const WrapperStyled = styled.div`
   justify-content: space-around;
 `;
 const CardStyled = styled(Card)`
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  margin-right: 3rem;
 `;
 
 export default function Content() {
@@ -77,8 +78,10 @@ export default function Content() {
               <CardStyled
                 key={item._id}
                 hoverable
-                style={{ width: 240 }}
-                cover={<img src={base64Image} alt={item.title} />}
+                style={{ width: 300, maxHeight: 500, overflowX: 'hidden', overflowY: 'hidden' }}
+                cover={<img style={{
+                  minHeight: 250
+                }} src={base64Image} alt={item.title} />}
                 onClick={() => {
                   setInfoModalVisible({
                     title:

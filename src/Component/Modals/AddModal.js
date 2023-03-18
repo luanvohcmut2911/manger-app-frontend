@@ -110,7 +110,8 @@ export default function AddModal() {
             <Input
               type="file"
               onChange={(e) => {
-                const [file] = e.target.files;
+                const [file] = e?.target.files;
+                console.log(file);
                 const data = new FileReader();
                 data.addEventListener('load', ()=>{
                   setPreviewImage(data.result);

@@ -11,9 +11,9 @@ import {
   faGamepad,
   faFilm,
   faUser,
-  faCircleInfo,
+  // faCircleInfo,
   faRightFromBracket,
-  faCalendarDays,
+  // faCalendarDays,
 } from "@fortawesome/free-solid-svg-icons";
 import {RouteContext} from "../Context/RouteProvider";
 const items = [
@@ -32,21 +32,21 @@ const items = [
     key: "2",
     icon: <FontAwesomeIcon icon={faFilm} />,
   },
-  {
-    label: "Schedule",
-    key: "3",
-    icon: <FontAwesomeIcon icon={faCalendarDays} />,
-  },
+  // {
+  //   label: "Schedule",
+  //   key: "3",
+  //   icon: <FontAwesomeIcon icon={faCalendarDays} />,
+  // },
   {
     label: "Account",
     key: "4",
     icon: <FontAwesomeIcon icon={faUser} />,
     children: [
-      {
-        label: "Information",
-        key: "4.1",
-        icon: <FontAwesomeIcon icon={faCircleInfo} />,
-      },
+      // {
+      //   label: "Information",
+      //   key: "4.1",
+      //   icon: <FontAwesomeIcon icon={faCircleInfo} />,
+      // },
       {
         label: "Log out",
         key: "4.2",
